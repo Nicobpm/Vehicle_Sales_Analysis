@@ -3,9 +3,9 @@ import pandas as pd
 import plotly_express as px
 
 data_VH = pd.read_csv("vehicles_us.csv")
-hist_button = st.button('build histogram')
-st.header('graphs about details of cars sales')
 
+st.header('graphs about details of cars sales')
+hist_button = st.button('build histogram')
 if hist_button:
     st.write('build a new histogram for data \
              related to the advertising \
