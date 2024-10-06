@@ -22,9 +22,3 @@ if checkbox:
     fig = px.scatter(data_VH, x="odometer", y="price")
     st.plotly_chart(fig, use_container_width=True)
 
-
-date = st.slider('Selec model of year that you are interested')
-
-
-data_VH.head(5)
-
