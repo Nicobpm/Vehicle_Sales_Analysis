@@ -10,7 +10,7 @@ if hist_button:
     st.write('build a new histogram for data \
              related to the advertising \
                  of vehicles sales')
-    fig = px.histogram(car_data, x="odometer")
+    fig = px.histogram(data_VH, x="odometer")
     st.plotly_chart(fig, use_container_width=True)
 
 
