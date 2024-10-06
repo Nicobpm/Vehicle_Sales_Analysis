@@ -2,6 +2,6 @@
  plotly_express
  streamlit
 
-
+pip install --upgrade pip
 
 
