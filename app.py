@@ -22,4 +22,3 @@ if checkbox:
     fig = px.scatter(data_VH, x="odometer", y="price")
     st.plotly_chart(fig, use_container_width=True)
 
-!pip install --upgrade pip  
