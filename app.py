@@ -10,7 +10,7 @@ st.header('You can select the range of years to analyze')
 min_year = 1908
 max_year = 2019
 
-selected_year = st.slider('Select year'
+selected_year = st.slider('Select year:',
                           min_value=min_year,
                           max_value=max_year,
                           value=max_year,
