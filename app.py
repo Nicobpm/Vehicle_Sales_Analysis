@@ -22,8 +22,8 @@ filtered_year = data_VH[(data_VH['year'] >= selected_year[0]) & (
 
 if not filtered_year.empty:
     st.write('Range of years to show:', selected_year)
-    title = ("Scatter plot of Price vs Odometer for years" {
-        selected_year[0]} to {selected_year[1]}')
+    title = f'Scatter plot of Price vs Odometer for years {
+        selected_year[0]} to {selected_year[1]}'
     fig = px.scatter(
         filtered_year,
         x="odometer",
