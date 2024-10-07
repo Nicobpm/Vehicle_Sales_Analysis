@@ -23,9 +23,9 @@ filtered_year = data_VH[(data_VH['year'] >= selected_year[0]) & (
 if not filtered_year.empty:
     st.write('Range of years to show:', selected_year)
     fig = px.scatter(filtered_year, x="odometer", y="price",
-                     title=filtered_year, x="odometer", y="price",
-                     title=f'Scatter plot of Price vs Odometer for years 
-                     {selected_year[0]} to {selected_year[1]}')
+                     title=f'Scatter plot of Price vs Odometer \ 
+                     for years {selected_year[0]} to {selected_year[1]}')
+                     
     st.plotly_chart(fig, use_container_width=True)
 else:
     st.write('No data available for the selected year range.')
