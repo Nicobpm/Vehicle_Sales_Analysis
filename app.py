@@ -16,8 +16,8 @@ selected_year = st.slider('Select year:',
                           value=max_year,
                           step=1)
 if selected_year:
-    st.write('Year selected:', selected_year)
-    fig = px.histogram(data_VH, x="odometer")
+    st.write('Range of years to show:', selected_year)
+    fig = px.scatter(data_VH, x="odometer", y="price")
     st.plotly_chart(fig, use_container_width=True)
 
 st.header('Build a dispersion graph')
@@ -26,6 +26,6 @@ Button = st.button('Click to build graph')
 
 if Button:
     st.write('Make a new graph displaying the price in milles')
-    fig = px.scatter(data_VH, x="odometer", y="price")
+    fig = px.histogram(data_VH, x="odometer")
     st.plotly_chart(fig, use_container_width=True)
 
