@@ -24,7 +24,7 @@ if not filtered_year.empty:
     st.write('Range of years to show:', selected_year)
     fig = px.scatter(filtered_year, x="odometer", y="price",
                      title=(f'"Scatter plot of Price vs Odometer for years" {
-                            selected_year[0]} to {selected_year[1]}')
+                            selected_year[0]} to {selected_year[1]}'))
                      
     st.plotly_chart(fig, use_container_width=True)
 else:
