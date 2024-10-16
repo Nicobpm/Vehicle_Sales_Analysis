@@ -43,6 +43,6 @@ st.header('Build a histogram for media odometer')
 Button = st.button('Click to build graph')
 
 if Button:
-    st.write('displaying the price in milles')
+    st.write('displaying histogram in milles')
     fig = px.histogram(data_VH, x="odometer")
     st.plotly_chart(fig, use_container_width=True)
