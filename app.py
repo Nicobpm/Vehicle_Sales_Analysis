@@ -25,11 +25,7 @@ filtered_year = data_VH[(data_VH['model_year'] >= selected_year[0]) &
 # Crate a scatter using the filter by slider
 if not filtered_year.empty:
     st.write('Range of years to show:', selected_year)
-<<<<<<< HEAD
-    title = f'fcatter graph of Price vs miles for years {selected_year[0]} to {selected_year[1]}'
-=======
-    title = f'Scatter Graph of Price vs. Miles for Years {selected_year[0]} to {selected_year[1]}'
->>>>>>> 4c5abc63cef5464894b1a5b0e3f6dded28741c57
+    title = f'Scatter graph of Price vs. Miles {selected_year[0]} to {selected_year[1]}'
     fig = px.scatter(
         filtered_year,
         x="odometer",
@@ -43,9 +39,9 @@ else:
 
 # Create a graph using button for histogram
 st.header('Build a histogram for media odometer')
-Button = st.button('Click to build graph')
+button_clicked = st.button('Click to build graph')
 
-if Button:
+if button_clicked:
     st.write('displaying histogram in milles')
-    fig = px.histogram(data_VH[filtered_year], x="odometer")
+    fig = px.histogram(filtered_year, x="odometer")
     st.plotly_chart(fig, use_container_width=True)
